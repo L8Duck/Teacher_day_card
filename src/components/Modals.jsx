@@ -2,16 +2,16 @@ import { AnimatePresence, motion } from "framer-motion";
 import PropTypes from 'prop-types';
 import { BsFlower1 } from "react-icons/bs";
 
-const Modals = ({ isOpen, setIsOpen ,data}) => {
+const Modals = ({ isCollapse, setIsCollapse ,data}) => {
   return (
     <AnimatePresence>
-      {isOpen && (
+      {isCollapse && (
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{duration:0.5}}
-          onClick={() => setIsOpen(false)}
+          onClick={() => setIsCollapse(false)}
           className="bg-slate-900/20 backdrop-blur p-8 fixed inset-0 z-50 grid place-items-center overflow-y-scroll cursor-pointer"
         >
           <motion.div
@@ -28,13 +28,13 @@ const Modals = ({ isOpen, setIsOpen ,data}) => {
                 <BsFlower1 size={50} />
               </div>
               <h3 className="text-3xl font-bold text-center mb-2">
-                Dear {data.teachername}
+                Dear {data.teacherName}
               </h3>
               <p className="text-lg text-center mb-3">
               {data.wish}
               </p>
                 <button
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => setIsCollapse(false)}
                   className="text-lg bg-white hover:opacity-90 transition-opacity text-indigo-600 font-semibold w-full py-2 rounded"
                 >
                   {data.username}
@@ -48,8 +48,8 @@ const Modals = ({ isOpen, setIsOpen ,data}) => {
 };
 
 Modals.propTypes = {
-  isOpen: PropTypes.bool,
-  setIsOpen: PropTypes.func,
+  isCollapse: PropTypes.bool,
+  setIsCollapse: PropTypes.func,
   data: PropTypes.shape({
     username: PropTypes.string,
     teachername: PropTypes.string,

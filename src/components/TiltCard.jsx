@@ -65,14 +65,15 @@ const TiltCard = ({teachername}) => {
           }}
           className="text-purple-300 w-28 mx-auto text-4xl" size={120}
         />
-        <button
+        <div
           style={{
             transform: "translateZ(50px)",
           }}
           className="text-center text-white text-2xl font-bold bg-purple-300 p-2 rounded-xl shadow-lg mt-7"
         >
-          Dear {teachername}
-        </button>
+          <p>Dear</p>
+          <p>{teachername}</p>
+        </div>
       </div>
     </motion.div>
   );

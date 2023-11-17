@@ -4,7 +4,7 @@ import Modals from "../Modals"
 import TiltCard from "../TiltCard"
 import BubbleText from "../bubbleText/BubbleText"
 
-const MyCard = ({data}) => {
+const MyCard = () => {
   const [OpenModal, setOpenModal] = useState(false)
   return (
     <div>
@@ -14,7 +14,7 @@ const MyCard = ({data}) => {
         <BubbleText text={"Happy Teacher's Day"} />
         </div>
       <div onClick={() => setOpenModal(!OpenModal)}>
-        <TiltCard teachername={data.teachername} />
+        <TiltCard/>
       </div>
       </div>
     </div>

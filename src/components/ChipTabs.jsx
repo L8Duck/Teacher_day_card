@@ -3,13 +3,13 @@ import PropTypes from "prop-types"
 import { useState } from "react";
 import { Link } from 'react-router-dom'
 
-const tabs = ["Generate","MyCard", "Explore"];
+const tabs = ["Home","MyCard", "Explore"];
 
 const ChipTabs = () => {
   const [selected, setSelected] = useState(tabs[0]);
 
   return (
-    <div className="py-4 bg-slate-900 flex items-center justify-around just flex-wrap gap-2">
+    <div className="relative py-4 bg-slate-900 flex items-center justify-around just flex-wrap gap-2">
         <p className="text-lg font-bold text-white">{"Teacher's day"}</p>
         <div>
         {tabs.map((tab) => (

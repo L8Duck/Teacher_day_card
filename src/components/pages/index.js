@@ -1,6 +1,0 @@
-export * from './Home'
-export * from './Explore'
-export * from './MyCard'
-export * from './Generate'
-export * from './Login'
-export * from './Register'
